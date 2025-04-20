@@ -1,0 +1,329 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Dark/Light Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: color 0.3s;
+}
+
+
+
+/* Typography */
+h1.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section_text_p1 {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.section_text_p2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-color-1 {
+  background-color: #333;
+  color: white;
+}
+
+.btn-color-1:hover {
+  background-color: #555;
+}
+
+.btn-color-2 {
+  background-color: white;
+  color: #333;
+  border: 2px solid #333;
+}
+
+.btn-color-2:hover {
+  background-color: #eee;
+}
+
+/* Icons */
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+/* Hamburger menu */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.menu-links {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-links li {
+  list-style: none;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-links li:last-child {
+  border-bottom: none;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-links.show {
+  display: flex;
+}
+
+/* Profile Section */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 10%;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.section__pic-container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0077cc;
+}
+
+.section__text {
+  max-width: 500px;
+  text-align: center;
+}
+
+#socials-container {
+  margin-top: 1rem;
+}
+
+/* About Section */
+#about {
+  padding: 4rem 10%;
+  background-color: #f9f9f9;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-pic {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-details-container {
+  max-width: 500px;
+}
+
+.about-containers {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.details-container {
+  flex: 1;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.details-container h3 {
+  margin: 0.5rem 0;
+}
+
+/* Projects Section */
+#projects {
+  padding: 4rem 10%;
+  background-color: #fff;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.experience-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.details-container.color-container {
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Contact Section */
+#contact {
+  padding: 4rem 10%;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-icon {
+  width: 25px;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 10%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+footer .nav-links a {
+  color: white;
+}
+
+footer .nav-links a:hover {
+  color: #ddd;
+}
+/* Kaizar */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+}
